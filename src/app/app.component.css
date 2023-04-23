@@ -1,0 +1,38 @@
+
+mat-toolbar {
+    justify-content: space-between;
+    background-color: rgb(230, 225, 225);
+}
+.content {
+    padding:32px;
+}
+.profile-button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .profile-text {
+    margin: 0 8px;
+    font-size: 16px;
+  font-weight: bold;
+  
+  }
+  .mat-menu-panel {
+   z-index: 1000;
+   transform: translate(1000px, 1000px); 
+  }
+.padding{
+  padding-left: 300px;
+}
+.profile-image-toolbar {
+  border-radius: 100%;
+  margin-right: 8px;
+}

@@ -1,0 +1,25 @@
+<div class="form-container">
+    <h1>Login</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="loginFn()">
+       
+    <input  placeholder="Email address" formControlName="email">
+        <span class="error-message"
+             *ngIf="registerFormControl.email.touched && loginForm.get('email')?.hasError('email')">
+            Invalid email
+        </span>
+        <span class="error-message"
+        *ngIf="loginForm.controls.email.errors?.['required'] && loginForm.controls.email.touched">
+            Email is required
+   </span>
+    <input  placeholder="Password" formControlName="password" type="password">
+     <span class="error-message"
+             *ngIf="registerFormControl.password.touched && loginForm.controls.password.errors?.['required'] ">
+            Must add password
+        </span>
+       
+        <button  [disabled]="!loginForm.valid" type="submit" class="loginBtn">Login</button>
+    
+        <span>New to Ibay? <a routerLink="/sign-up">Sign Up!</a></span>
+    </form>
+    
+</div>

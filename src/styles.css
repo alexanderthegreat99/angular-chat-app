@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+.form-container {
+    display:block;
+    max-width: 300px;
+    margin: auto;
+
+    background: rgb(230, 223, 223);
+    padding:48px;
+    border-radius: 16pxz;
+}
+.margin-top {
+    margin-top: 16px !important;
+  }
+  

@@ -1,0 +1,47 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+<mat-toolbar class="toolbar">
+  Angular Chat-App with Firebase  
+  <ng-container *ngIf="user$| async as user; else loginButton">
+     
+    <button mat-button class="profile-button" [matMenuTriggerFor]="userMenu">
+      <div class="profile-container">
+      <!-- <mat-icon >account_circle</mat-icon> -->
+      <img class="profile-image-toolbar" width="30" height="30" [src]="user.photoURL ?? '/assets/images/image-placeholder.png'">
+      <span class="profile-text">Profile</span>
+      <mat-icon>expand_more</mat-icon>
+    </div>
+    </button>
+  
+  </ng-container>
+  <ng-template #loginButton>
+  <button mat-button routerLink="login">
+      <mat-icon>login</mat-icon>
+      Login
+  </button>
+</ng-template>
+</mat-toolbar>
+<mat-menu #userMenu="matMenu" class="mat-menu-panel" xPosition="after" yPosition="below">
+<ng-template matMenuContent>
+  
+  <button mat-menu-item routerLink="/profile">
+   <mat-icon>account_circle</mat-icon>
+  Profile
+   </button>
+   <button mat-menu-item routerLink="/home">
+    <mat-icon>chat</mat-icon>
+   Chat With Users
+   </button>
+   <button mat-menu-item (click)="logout()">
+   <mat-icon>logout</mat-icon>
+  Logout
+  </button>
+  
+</ng-template>
+</mat-menu>
+
+<div class="content">
+<router-outlet></router-outlet>
+<lib-ng-toast></lib-ng-toast>
+<!-- <app-login></app-login> -->
+</div>

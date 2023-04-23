@@ -1,0 +1,31 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-container .loginBtn {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .error-message {
+    color: red;
+    font-size: small;
+    margin-top: 5px; 
+    margin-bottom: 5px; 
+    margin-left: -52px; 
+    
+  }
